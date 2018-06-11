@@ -8,26 +8,22 @@ def sort_by_strings(s,t)
   sorted = []
   repeats = []
   target_word.each do |char|
-       if !sorted.include?(char)
-         index = order_word[char]
-       else
-        repeats.push(char)
-       end
+   if !sorted.include?(char)
+     index = order_word[char]
+   else
+    repeats.push(char)
+   end
 
-       sorted.insert(index, char) unless index.nil?
-       
-     end
+   sorted.insert(index, char) unless index.nil?
+
   end
 
   repeats.each do |char|
-
    index = sorted.index(char) + 1
    sorted.insert(index, char)
   end
 
-  result = sorted.join("")
-  result
-
+  puts sorted.join("")
 end
 
 def hash_map_order_word(t)
@@ -38,4 +34,4 @@ def hash_map_order_word(t)
   ordered_word
 end
 
-sort_by_strings("weather","therapyw")
+sort_by_strings("good","odg")
